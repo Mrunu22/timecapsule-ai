@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from django.contrib.auth.password_validation import validate_password
+from .models import Capsule
 
 class RegisterSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True, required=True, validators=[validate_password])
@@ -19,3 +20,9 @@ class RegisterSerializer(serializers.ModelSerializer):
         validated_data.pop('password2')
         user = User.objects.create_user(**validated_data)
         return user
+    
+class CapsuleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Capsule
+        fields = ['id', 'owner', 'title', 'content', 'unlock_date']
+        read_only_fields = ['owner']
