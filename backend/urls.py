@@ -13,3 +13,7 @@ urlpatterns = [
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
+
+#access: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ4MDIwMDgyLCJpYXQiOjE3NDgwMTgyODIsImp0aSI6IjExNTIzZjIzODhhZjRhNzNiYjA2Y2NhYWEyMDU1MjUyIiwidXNlcl9pZCI6M30.5LtWelZ6R5Pu8TmbCLjoJruLcg_MqC4-Nwd5Cfl1cG4"
+
+#"refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0ODEwNDY4MiwiaWF0IjoxNzQ4MDE4MjgyLCJqdGkiOiI2ODhkMDVjYjRhMmU0ZTFmOWEwNTkwOGJlNmZkZTlkNyIsInVzZXJfaWQiOjN9.38gfJpVfAy5Tvyz36RaiF2NeHfabhcCFzijFFeHneL4",
